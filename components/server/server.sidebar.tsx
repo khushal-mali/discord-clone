@@ -72,7 +72,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
   );
 
   const members = server?.members.filter(
-    (member) => member.profileId === profile.id
+    (member) => member.profileId !== profile.id
   );
 
   if (!server) {
